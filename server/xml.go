@@ -29,7 +29,7 @@ type Note struct {
 
 //Reading the DB
 func OpenXMLfile() Data {
-	xmlFile, err := os.Open("db2.xml")
+	xmlFile, err := os.Open("db.xml")
 	if err != nil {
 		log.Fatal("XML File open:", err)
 	}
@@ -52,7 +52,7 @@ func WriteXMLfile(data Data) {
 	if err != nil {
 		log.Fatal("XML marshal:", err)
 	}
-	err = ioutil.WriteFile("db2.xml", file, 0644)
+	err = ioutil.WriteFile("db.xml", file, 0644)
 	if err != nil {
 		log.Fatal("XML file write:", err)
 	}
